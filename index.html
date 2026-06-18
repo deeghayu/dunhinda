@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ගණිත පන්තිය</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ගණිත පන්තිය - ගාමිණී සර්</title>
+
+    <style>
+        /* CSS කොටස මෙතනට දාන්න */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul { display: flex; list-style: none; gap: 20px; }
+        .navbar ul li a { text-decoration: none; color: #333; font-weight: bold; }
+        .login-btn { background: #3f51b5; color: white !important; padding: 8px 15px; border-radius: 5px; }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 50px auto;
+            gap: 40px;
+        }
+
+        .content { flex: 1; }
+        .content h1 { font-size: 3rem; color: #333; margin-bottom: 20px; }
+        .btn { 
+            display: inline-block;
+            padding: 15px 30px; 
+            background-color: #ff6b6b; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 20px;
+        }
+
+        .image-box { flex: 1; }
+        .image-box img { width: 100%; border-radius: 20px; }
+    </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="logo">ගණිත පන්තිය</div>
+        <ul>
+            <li><a href="#">මුල් පිටුව</a></li>
+            <li><a href="#">ගුරුවරයා</a></li>
+            <li><a href="#">පන්ති</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">සම්බන්ධ වන්න</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
 
     <section class="hero">
         <div class="content">
@@ -15,7 +70,7 @@
             <a href="#" class="btn">අප හා සම්බන්ධ වන්න</a>
         </div>
         <div class="image-box">
-            <img src="business-man-planning-calculating-his-expenses.png" alt="Maths learning">
+            <img src="your-image.jpg" alt="Maths learning">
         </div>
     </section>
 
