@@ -10,7 +10,7 @@
         body { font-family: Arial, sans-serif; background-color: #f4f7f6; line-height: 1.6; }
 
         /* Navbar */
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .navbar ul { display: flex; list-style: none; gap: 20px; }
         .navbar ul li a { text-decoration: none; color: #333; font-weight: bold; }
         .login-btn { background: #3f51b5; color: white !important; padding: 8px 15px; border-radius: 5px; }
@@ -22,6 +22,12 @@
         .btn { display: inline-block; padding: 15px 30px; background-color: #ff6b6b; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
         .image-box { flex: 1; min-width: 300px; }
         .image-box img { width: 100%; border-radius: 20px; }
+
+        /* Classes Section */
+        .classes-section { padding: 80px 10%; background-color: #f4f7f6; }
+        .classes-table { width: 100%; max-width: 900px; margin: auto; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .classes-table th, .classes-table td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        .classes-table th { background-color: #3f51b5; color: white; }
 
         /* About Section */
         .about-section { padding: 80px 10%; background-color: #fff; }
@@ -36,32 +42,42 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">ගණිත පන්තිය</div>
         <ul>
             <li><a href="#">මුල් පිටුව</a></li>
             <li><a href="#about">ගුරුවරයා</a></li>
-            <li><a href="#">පන්ති</a></li>
+            <li><a href="#classes">පන්ති</a></li>
             <li><a href="#">YouTube</a></li>
             <li><a href="#">සම්බන්ධ වන්න</a></li>
             <li><a href="#" class="login-btn">Login</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="content">
             <h1>ගණිතය සරලව ඉගෙන ගන්න</h1>
             <p>ප්‍රායෝගික ගැටළු විසඳමින් ගණිතය විෂය ගොඩදාගන්න අප හා එක්වන්න.</p>
-            <a href="#about" class="btn">අප හා සම්බන්ධ වන්න</a>
+            <a href="#classes" class="btn">පන්ති වේලාවන් බලන්න</a>
         </div>
         <div class="image-box">
             <img src="maths.png" alt="Maths learning">
         </div>
     </section>
 
-    <!-- About Me Section -->
+    <section id="classes" class="classes-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">පන්ති කාලසටහන</h2>
+        <table class="classes-table">
+            <tr><th>පන්තිය</th><th>දිනය හා වේලාව</th></tr>
+            <tr><td>6 වසර (මොඩියුල් ක්‍රමයට)</td><td>සෙනසුරාදා 10.30 - 12.30</td></tr>
+            <tr><td>7 වසර</td><td>සිකුරාදා 03.00 - 05.00</td></tr>
+            <tr><td>8 වසර</td><td>ඉරිදා 03.30 - 05.30</td></tr>
+            <tr><td>9 වසර</td><td>සෙන: 03.30-06.00 (Group-1) | ඉරිදා: 01.30-03.30 (Group-2)</td></tr>
+            <tr><td>10 වසර</td><td>සෙන: 12.30-03.30 (Group-1) | බදාදා: 05.15-08.00 (Group-2)</td></tr>
+            <tr><td>11 වසර</td><td>සෙන: 07.00-10.00 | ඉරිදා: Paper Class</td></tr>
+        </table>
+    </section>
+
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
@@ -70,10 +86,7 @@
             <div class="about-content">
                 <h2>ගුරුවරයා ගැන</h2>
                 <p><strong>දුන්හිද ප්‍රදීප්</strong> - ගණිත විෂය සඳහා ඔබේ විශ්වාසවන්ත මගපෙන්වන්නා.</p>
-                <p>කැලණිය විශ්ව විද්‍යාලයේ ගණිත විෂය (Pure Maths & Applied Maths) පිළිබඳ උපාධිධාරියෙකු වන මා, වෘත්තීය සුදුසුකම් ලෙස SLIIT ආයතනයෙන් මෘදුකාංග ඉංජිනේරු විද්‍යාව පිළිබඳ ඩිප්ලෝමාවක් (Dip in S.E) සහ සිංගප්පූරුවෙන් හෝටල් කළමනාකරණය (Hospitality Management) පිළිබඳ ඩිප්ලෝමාවක් හදාරා ඇත.</p>
-                <p>වර්තමානයේ පාසල් ආචාර්යවරයෙකු ලෙසත්, පිළිතුරු පත්‍ර පරීක්ෂකවරයෙකු ලෙසත් කටයුතු කරමින් වසර ගණනාවක අත්දැකීම් සහිතව සිසුන්ට ඉගැන්වීම් සිදුකරයි.</p>
-                <p>කුරුණෑගල දිස්ත්‍රික්කයේ ගොකරැල්ල මධ්‍ය මහා විද්‍යාලයේ ඉගැන්වීම් කටයුතු සිදුකරන අතර, මැල්සිරිපුර සහ ගොකරැල්ල අවට භෞතික පන්තිද, නවීන තාක්ෂණය ඔස්සේ ඔන්ලයින් පන්තිද පවත්වයි.</p>
-                <p>තවත් ඉගෙනුම්  සඳහා <strong>'Dunhinda Pradeep'</strong> YouTube චැනලය හා එක්වන්න.</p>
+                <p>කැලණිය විශ්ව විද්‍යාලයේ ගණිත විෂය (Pure Maths & Applied Maths) උපාධිධාරියෙකු වන මා, SLIIT මෘදුකාංග ඉංජිනේරු ඩිප්ලෝමාවක් සහ සිංගප්පූරුවෙන් හෝටල් කළමනාකරණය පිළිබඳ ඩිප්ලෝමාවක් හදාරා ඇත. පාසල් ආචාර්යවරයෙකු සහ පිළිතුරු පත්‍ර පරීක්ෂකවරයෙකු ලෙස වසර ගණනාවක අත්දැකීම් සහිතයි.</p>
                 <a href="YOUR_GOOGLE_FORM_LINK" class="btn-blue" target="_blank">Google Form එක පුරවන්න</a>
             </div>
         </div>
