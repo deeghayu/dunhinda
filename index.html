@@ -3,50 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dunhinda pradeep </title>
+    <title>Dunhinda Pradeep - ගණිත පන්තිය</title>
 
     <style>
-        /* CSS කොටස මෙතනට දාන්න */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; line-height: 1.6; }
 
-        body { font-family: Arial, sans-serif; background-color: #f4f7f6; }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
+        /* Navbar */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .navbar ul { display: flex; list-style: none; gap: 20px; }
         .navbar ul li a { text-decoration: none; color: #333; font-weight: bold; }
         .login-btn { background: #3f51b5; color: white !important; padding: 8px 15px; border-radius: 5px; }
 
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 80%;
-            margin: 50px auto;
-            gap: 40px;
-        }
-
-        .content { flex: 1; }
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; width: 80%; margin: 50px auto; gap: 40px; flex-wrap: wrap; }
+        .content { flex: 1; min-width: 300px; }
         .content h1 { font-size: 3rem; color: #333; margin-bottom: 20px; }
-        .btn { 
-            display: inline-block;
-            padding: 15px 30px; 
-            background-color: #ff6b6b; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            margin-top: 20px;
-        }
-
-        .image-box { flex: 1; }
+        .btn { display: inline-block; padding: 15px 30px; background-color: #ff6b6b; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .image-box { flex: 1; min-width: 300px; }
         .image-box img { width: 100%; border-radius: 20px; }
+
+        /* About Section */
+        .about-section { padding: 80px 10%; background-color: #fff; }
+        .about-container { display: flex; align-items: center; gap: 40px; max-width: 1000px; margin: auto; flex-wrap: wrap; }
+        .about-image { flex: 1; min-width: 300px; }
+        .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .about-content { flex: 1; min-width: 300px; }
+        .about-content h2 { font-size: 2.5rem; margin-bottom: 20px; color: #333; }
+        .about-content p { margin-bottom: 15px; color: #666; font-size: 1.1rem; }
+        .btn-blue { display: inline-block; padding: 12px 25px; background-color: #3f51b5; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -55,7 +40,7 @@
         <div class="logo">ගණිත පන්තිය</div>
         <ul>
             <li><a href="#">මුල් පිටුව</a></li>
-            <li><a href="#">ගුරුවරයා</a></li>
+            <li><a href="#about">ගුරුවරයා</a></li>
             <li><a href="#">පන්ති</a></li>
             <li><a href="#">YouTube</a></li>
             <li><a href="#">සම්බන්ධ වන්න</a></li>
@@ -67,10 +52,26 @@
         <div class="content">
             <h1>ගණිතය සරලව ඉගෙන ගන්න</h1>
             <p>ප්‍රායෝගික ගැටළු විසඳමින් ගණිතය විෂය ගොඩදාගන්න අප හා එක්වන්න.</p>
-            <a href="#" class="btn">අප හා සම්බන්ධ වන්න</a>
+            <a href="#about" class="btn">අප හා සම්බන්ධ වන්න</a>
         </div>
         <div class="image-box">
             <img src="maths.png" alt="Maths learning">
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="teacher.jpg" alt="ගාමිණී සර්">
+            </div>
+            <div class="about-content">
+                <h2>ගුරුවරයා ගැන</h2>
+                <p>ආයුබෝවන්! මම ගාමිණී. මම වසර ගණනාවක අත්දැකීම් ඇති ගණිත විෂය උගන්වන ගුරුවරයෙක්. සරල සිද්ධාන්ත හරහා සංකීර්ණ ගණිත ගැටළු පහසුවෙන් විසඳීමට සිසුන්ට මග පෙන්වීම මගේ අරමුණයි.</p>
+                <p>මා දැනට කුරුණෑගල දිස්ත්‍රික්කයේ <strong>ගොකරැල්ල මධ්‍ය මහා විද්‍යාලයේ</strong> ඉගැන්වීම් කටයුතු සිදුකරන අතර, මැල්සිරිපුර සහ ගොකරැල්ල වැනි ස්ථානවල tuition  පන්ති පවත්වනු ලබයි.</p>
+                <p>ඊට අමතරව, නවීන තාක්ෂණය ඔස්සේ ඔන්ලයින් පන්ති පවත්වන අතර, <strong>'Dunhinda Pradeep'</strong> නමැති මගේ YouTube චැනලය හරහාත් සිසුන් සඳහා පාඩම් මාලා ඉදිරිපත් කරමි.</p>
+                <p>ඔන්ලයින් පන්ති සඳහා සම්බන්ධ වීමට පහත ඇති Google Form එක පුරවන්න:</p>
+                <a href="YOUR_GOOGLE_FORM_LINK" class="btn-blue" target="_blank">Google Form එක පුරවන්න</a>
+            </div>
         </div>
     </section>
 
